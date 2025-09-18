@@ -199,14 +199,18 @@ GO
 INSERT INTO Sedes (Nombre, Direccion, Barrio, Parqueadero, Telefono)
 VALUES 
     ('Veterinaria Centro', 'Carrera 50 #45-20', 'El Centro', 1, '3001234567'),
-    ('Veterinaria Norte', 'Calle 80 #30-15', 'Laureles', 0, '3009876543');
+    ('Veterinaria Norte', 'Calle 80 #30-15', 'Laureles', 0, '3119876543'),
+	('Veterinaria Sur', 'Carrera 30 #45-20', 'La Estrella', 1, '3211876567'),
+	('Veterinaria Occidente', 'Calle 40 #49-20', 'Pilarica', 0, '3411233467'),
+	('Veterinaria Oriente', 'Carrera 60 #36-10', 'Robledo', 1, '3003214567');
 GO
 
 INSERT INTO Salas (Numero, Tipo, Area, Id_Sede)
 VALUES 
     (101, 'Consulta General', 25.50, 1),
     (201, 'Cirugía', 40.75, 1),
-    (102, 'Consulta General', 30.00, 2),
+    (101, 'Consulta General', 30.00, 2),
+	(102, 'Consulta General', 25.00, 1),
     (202, 'Urgencias', 35.25, 2);
 GO
 
@@ -215,6 +219,7 @@ VALUES
     ('Estetoscopio', 'Littmann', 'Classic III', '2022-03-15', '2022-06-10', '2024-01-15', 1),
     ('Mesa Quirúrgica', 'Medtek', 'MQ-500', '2021-11-20', '2022-01-25', '2024-02-10', 2),
     ('Monitor Signos Vitales', 'Philips', 'IntelliVue', '2023-05-10', '2023-07-15', '2024-01-20', 3),
+	('Monitor Signos Vitales', 'Philips', 'IntelliVue', '2023-05-10', '2023-07-15', '2024-01-20', 4),
     ('Lámpara Quirúrgica', 'Steris', 'Harmony', '2022-08-05', '2022-10-12', '2024-02-05', 4);
 GO
 
@@ -223,6 +228,7 @@ VALUES
     ('Jeringa 5ml', 'MedSupply', 1500, 0),
     ('Guantes Látex', 'SafeHands', 800, 0),
     ('Desinfectante', 'CleanVet', 12000, 1),
+	('Jeringa 10ml', 'MedSupply', 3000, 0),
     ('Vendas', 'MedCare', 3500, 0);
 GO
 
@@ -231,6 +237,7 @@ VALUES
     ('Amoxicilina', 'VetPharma', 25000, 'Oral', 0),
     ('Vacuna Antirrábica', 'BioVet', 45000, 'Subcutánea', 1),
     ('Meloxicam', 'AnimalHealth', 18000, 'Oral', 0),
+	('Antrax', 'BioVet', 4000, 'Oral', 1),
     ('Suero Fisiológico', 'MedVet', 8000, 'Intravenosa', 1);
 GO
 
@@ -239,6 +246,7 @@ VALUES
     ('12345678', 'Ana García', 'Recepcionista', '2023-03-15', '8:00 AM - 5:00 PM', '3101234567', 1),
     ('87654321', 'Carlos López', 'Auxiliar Veterinario', '2023-01-10', '7:00 AM - 4:00 PM', '3109876543', 1),
     ('11223344', 'María Rodríguez', 'Recepcionista', '2023-05-20', '2:00 PM - 10:00 PM', '3105556677', 2),
+	('25674893', 'Mario Rodríguez', 'Auxiliar Veterinario', '2023-06-25', '2:00 PM - 10:00 PM', '3109986677', 2),
     ('44332211', 'Luis Martínez', 'Auxiliar Veterinario', '2023-02-28', '8:00 AM - 5:00 PM', '3107778899', 2);
 GO
 
@@ -247,6 +255,7 @@ VALUES
     ('98765432', 'Dr. Roberto Pérez', 45, 'Cirugía', '2022-08-15', '9:00 AM - 6:00 PM', '3201234567', 1),
     ('56789012', 'Dra. Elena Vargas', 38, 'Medicina Interna', '2023-01-20', '8:00 AM - 5:00 PM', '3209876543', 1),
     ('34567890', 'Dr. Miguel Torres', 42, 'Dermatología', '2022-11-10', '10:00 AM - 7:00 PM', '3205556677', 2),
+	('62783645', 'Dra. Helen Villa', 47, 'Medicina Interna', '2023-01-20', '8:00 AM - 5:00 PM', '3233476543', 1),
     ('78901234', 'Dra. Carmen Silva', 36, 'Cardiología', '2023-03-05', '7:00 AM - 4:00 PM', '3207778899', 2);
 GO
 
@@ -255,6 +264,7 @@ VALUES
     ('1020304050', 'Juan Ramírez', 35, 'Calle 45 #20-30', 'juan.ramirez@email.com', 'Masculino', 3, '2023-06-15'),
     ('2030405060', 'Laura Gómez', 28, 'Carrera 70 #35-45', 'laura.gomez@email.com', 'Femenino', 4, '2023-07-20'),
     ('3040506070', 'Pedro Morales', 52, 'Calle 60 #25-40', 'pedro.morales@email.com', 'Masculino', 2, '2023-08-10'),
+	('1020304050', 'Juana Ramírez', 36, 'Calle 45 #20-30', 'juana.ramirez@email.com', 'Femenino', 3, '2023-07-10'),
     ('4050607080', 'Sandra Castro', 31, 'Carrera 80 #50-25', 'sandra.castro@email.com', 'Femenino', 5, '2023-09-05');
 GO
 
@@ -341,3 +351,4 @@ VALUES
     ('2024-03-28', 4, 7), -- Dra. Carmen Silva atendió a Bruno
     ('2024-03-30', 4, 8); -- Dra. Carmen Silva atendió a Chloe
 GO
+
